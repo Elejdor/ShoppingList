@@ -110,7 +110,7 @@ public class MainActivity extends Activity {
                 HttpClient httpClient = new DefaultHttpClient();
                 HttpContext localContext = new BasicHttpContext();
                 HttpGet httpGet = new HttpGet(
-                        "http://shopping.devspot.pl/?id="+myIdEdit.getText());
+                        "http://shopping.devspot.pl/mindex.php?id="+myIdEdit.getText());
                 HttpResponse response = httpClient.execute(httpGet,
                         localContext);
 
