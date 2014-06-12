@@ -14,7 +14,7 @@
 class config {
     //put your code here
     public static $dbname = '08692495_0000004';
-    public static $password = 'zakupy123';
+    public static $password = '';
     public static $url = 'sql.devspot.pl';
     public static $encoding = 'utf8';
 }
