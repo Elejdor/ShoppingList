@@ -5,9 +5,9 @@
  * and open the template in the editor.
  */
 
+ //pobieram wartosci wpisane w formie typu POST
 $identifier = $_POST['identifier'];
 $names = $_POST['name'];
-//$checks = $_POST['chk'];
 
 $sl = new ShoppingList();
 $sl->setName($identifier);
@@ -15,7 +15,6 @@ $sl->setName($identifier);
 for ($i = 0; $i < count($names); $i++) {
     $prod = new Product();
     $prod->setName($names[$i]);
-    //$prod->setChecked($checks[$i]);
 
     $sl->addProduct($prod);
 }

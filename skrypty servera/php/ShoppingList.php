@@ -9,9 +9,10 @@
 /**
  * Description of ShoppingList
  *
- * @author WolfGD
+ * @author WolfGD = Łukasz Nizik
  */
 
+ //klasa produktu na liscie
 class Product {
     private $name = "";
     private $checked = false;
@@ -44,6 +45,7 @@ class Product {
     }
 }
 
+//klasa dla pojedynczej listy
 class ShoppingList {
     
     private $id;

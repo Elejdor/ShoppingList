@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
  * Created by WolfGD on 6/1/2014.
  */
 public class MyParser {
+	//ten skrypt parsuje odpowiedz servera http wg. okreslonej konwencji i zwraca wynik w postaci kolekcji
     public static ArrayList<Product> parseToListOfProducts(String text) {
         String[] lines = split(text, ";");
         ArrayList<Product> result = new ArrayList<Product>(lines.length);

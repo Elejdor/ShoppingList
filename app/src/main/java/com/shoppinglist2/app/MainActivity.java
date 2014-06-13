@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 products.clear();
+				//na klikniecie przyciusku uruchamiamy watek
                 new ListLoader().execute();
             }
         });
@@ -89,6 +90,7 @@ public class MainActivity extends Activity {
     public String text = "";
     public class ListLoader extends AsyncTask<String, Void, String> {
 
+		//wywolywane w po kazdorazowym zakonczeniu pobierania dokumentu przez http
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
@@ -98,7 +100,7 @@ public class MainActivity extends Activity {
             {
                 products.add(product);
             }
-
+			//uruchamiamy metode wypelniajaca liste
             populateList();
         }
 
@@ -109,15 +111,17 @@ public class MainActivity extends Activity {
             try {
                 HttpClient httpClient = new DefaultHttpClient();
                 HttpContext localContext = new BasicHttpContext();
+				//pobieramy cala strone przez http
                 HttpGet httpGet = new HttpGet(
                         "http://shopping.devspot.pl/mindex.php?id="+myIdEdit.getText());
                 HttpResponse response = httpClient.execute(httpGet,
                         localContext);
-
+				//sciagamy do bufora
                 BufferedReader reader = new BufferedReader(
                         new InputStreamReader(response.getEntity().getContent()));
 
                 String line = null;
+				//zapisujemu bufor do stringu
                 while ((line = reader.readLine()) != null) {
                     result += line;
                 }

@@ -35,6 +35,7 @@ public class Product {
     }
 
     public static Product tryParse(String text) {
+	//parsowanie pojedynczego produktu z konwencji servera
         String[] values = MyParser.split(text, "|");
         if (values.length != 2)
             return new Product("wrong number of vals: " + values.length + ", " + values[0], false);

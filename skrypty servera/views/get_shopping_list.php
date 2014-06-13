@@ -1,4 +1,6 @@
+
 <?php
+//wyswietla liste w postaci dla mobilek
 ini_set('default_charset', 'utf-8');
 
 if (isset($_GET['id'])) {

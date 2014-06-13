@@ -1,4 +1,4 @@
-
+<!-- podajemy nazwe listy -->
 <div style="max-width: 300px; margin: 0 auto;">
     <form id="list" action="?action=add" method="post">
         <div class="alert alert-info">

@@ -13,6 +13,8 @@ import java.util.List;
 /**
  * Created by WolfGD on 6/1/2014.
  */
+ 
+ //posredniczy miedzy UI, a warstwa logiki
 public class ProductArrayAdapter extends ArrayAdapter<Product> {
     private Activity activity;
     private List<Product> products;

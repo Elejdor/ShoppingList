@@ -27,6 +27,7 @@
             include 'php/ShoppingList.php';
             include 'config.php';
 
+			//wybieramy podstrone do wybrania, przesylane metoda GET
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
                 if ($action == 'submit')

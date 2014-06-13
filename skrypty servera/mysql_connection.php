@@ -9,10 +9,10 @@
 /**
  * Description of mysql_connector
  *
- * @author WolfGD
+ * @author Łukasz Nizik
  */
 
-
+//pomoc przy laczeniu z baza
 class connector {
 
     public function connect() {
@@ -34,6 +34,7 @@ class connector {
 
 class slQueries {
 
+//pobiera pojedyncza liste z bazy danych
     static public function GetList($name) {
         $con = new connector();
         $con->connect();
@@ -48,8 +49,8 @@ class slQueries {
         $message = 'Invalid query: ' . mysql_error() . "\n";
             $message .= 'Whole query: ' . $query;
             die($message);
-        }
-        
+        }        
+		
         while ($row = mysql_fetch_array($response)) {  
             $sl->setName($row['ListName']);
             $sl->setId($row['ListId']);

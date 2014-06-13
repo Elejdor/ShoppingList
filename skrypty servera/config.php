@@ -9,7 +9,7 @@
 /**
  * Description of config
  *
- * @author WolfGD
+ * @author Łukasz Nizik
  */
 class config {
     //put your code here
